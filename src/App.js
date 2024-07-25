@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container, Typography } from '@mui/material';
+import TopSummaryCards from './TopSummaryCards';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container style={{ marginTop: 20 }}>
+      <Typography variant="h4" gutterBottom style={{ textAlign: 'center', marginBottom: 20 }}>
+        Project Health Monitoring Dashboard for Quality Management Plan
+      </Typography>
+      <Typography variant="subtitle1" gutterBottom style={{ textAlign: 'center', marginBottom: 40 }}>
+        This slide illustrates quality management dashboard that can help organization to plan and identify the defects and fatal errors of project. Its key elements are total tasks, sample, quality score, defect analysis, quality score and sampling percentage.
+      </Typography>
+      <TopSummaryCards />
+    </Container>
   );
-}
+};
 
 export default App;

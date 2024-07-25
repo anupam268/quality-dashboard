@@ -1,0 +1,10 @@
+{
+  "totalTask": 100,
+  "sample": 50,
+  "samplePercentage": 50,
+  "defects": 10,
+  "defectsPercentage": 10,
+  "fatalError": 5,
+  "fatalErrorPercentage": 5,
+  "qualityScore": 90
+}
