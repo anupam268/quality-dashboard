@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography } from '@mui/material';
 import TopSummaryCards from './TopSummaryCards';
+import HorizontalBarChart from './HorizontalBarChart';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         This slide illustrates quality management dashboard that can help organization to plan and identify the defects and fatal errors of project. Its key elements are total tasks, sample, quality score, defect analysis, quality score and sampling percentage.
       </Typography>
       <TopSummaryCards />
+      <HorizontalBarChart />
     </Container>
   );
 };

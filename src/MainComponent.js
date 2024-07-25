@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Grid } from '@mui/material';
+import { Grid, Box } from '@mui/material';
 import TopSummaryCards from './TopSummaryCards';
-import HorizontalBarChart from './HorizontalBarChart';
+import HorizontalBarCharts from './HorizontalBarCharts';
 import data from './data.json';
 
 const MainComponent = () => {
@@ -14,23 +14,17 @@ const MainComponent = () => {
   if (!summaryData) return <div>Loading...</div>;
 
   return (
-    <Grid container spacing={4}>
+    <Box>
       {/* Top Summary Cards */}
-      <TopSummaryCards />
+      <Box mb={12}>
+        <TopSummaryCards />
+      </Box>
 
       {/* Horizontal Bar Charts */}
-      <Grid container item spacing={4} style={{ marginTop: '20px' }}>
-        <Grid item xs={4}>
-          <HorizontalBarChart data={summaryData.barChartData} title="Chart 1" />
-        </Grid>
-        <Grid item xs={4}>
-          <HorizontalBarChart data={summaryData.barChartData} title="Chart 2" />
-        </Grid>
-        <Grid item xs={4}>
-          <HorizontalBarChart data={summaryData.barChartData} title="Chart 3" />
-        </Grid>
-      </Grid>
-    </Grid>
+      <Box mt={12}> {/* Increase the space between rows */}
+        <HorizontalBarCharts />
+      </Box>
+    </Box>
   );
 };
 
